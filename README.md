@@ -1,4 +1,4 @@
-# algorithm_data_structures
+# Algorithm and Data structures
 My project is divided into two parts: 
 
 The first part uses data structures such as red and black trees to implement insiemistic operationsby reading various numbers from a file.
@@ -8,17 +8,14 @@ DFS for topological sorting.
 
 FIRST QUESTION.
 The problem posed in question 1 concerns the realization of a data structure for generic sets based on RED BLACK trees.
-
 The data structure must be able to perform the operations of UNION, INTERSECTION and DIFFERENCE
 treating each tree as a set of integers.
-
 The numbers are read from a text file where the elements of the same set are on the same line separated by a space (different lines correspond to different sets).
 Subsequently the read numbers are inserted as keys of the nodes of the RED BLACK tree, all this will be
 explained in more detail in the section "DESCRIPTION OF DATA STRUCTURE" and in the section "DESCRIPTION OF ALGORITHM".
-
 The output of the problem consists in showing the results of the above operations by providing the program with a menu from which the user can choose the function to be performed using the keyboard.
-DATA STRUCTURE DESCRIPTION:
 
+DATA STRUCTURE DESCRIPTION:
 
 The data structure treated is that of the RED BLACK trees, i.e. a self-balancing binary search tree whose height, thanks to particular conditions, remains limited allowing a logarithmic complexity in the
 insertion and elimination methods (methods analyzed below)
@@ -39,40 +36,26 @@ Below we find the characteristics that a RED BLACK mast must satisfy.
 6.	Leaves are NULL and are always BLACK in color.
 7.	The root of the tree is always BLACK
 8.	If a node is RED then its children are BLACK.
-9.	Each path from an internal node to a leaf has the same number of BLACK nodes(B
-HEIGHT).
+9.	Each path from an internal node to a leaf has the same number of BLACK nodes(BHEIGHT).
 10.	Every RB tree with root x has at least 2bh(x) - 1 internal nodes, where bh(x) is the height black of node x.
 11.	The black height bh(x) is the number of BLACK nodes in a simple path from node x to a leaf (excluding x).
-12.	In a RB tree at least half of the nodes from the root to a leaf must be BLACK,
-we can also have the case where all nodes are BLACK.
+12.	In a RB tree at least half of the nodes from the root to a leaf must be BLACK,we can also have the case where all nodes are BLACK.
 13.	In an RB tree no path from a node v to a leaf is longer than twice as long as the path from v to another leaf.
 14.	In a tree RB with N internal nodes we have a maximum height 2 (log2(N+1)).
 
-
 PROOF POINT 8.
-
 Proof by induction:
-
 Base case -> bh(x) = 0 so x is a leaf and the subtree 2bh(x) - 1 = 1-1 = 0 internal nodes.
-
 Inductive step -> node x with two children. Red child = bh(x) and black child = bh(x) - 1.
-
 Each child has at least 2bh(x)-1 – 1 internal nodes so (2bh(x)-1 – 1) + (2bh(x)-1 – 1) + 1 = 2 bh(x) - 1 internal nodes.
 
 PROOF POINT 12.
-
 Demonstration:
-
 Let h = height by property 6 (if a node is RED it cannot have RED children) and by property 8 we know that at least half of the internal nodes must be black so the B-HEIGHT must be equal in the worst case h/2 .
-
 N >= 2h/2 -1	N -> number of nodes.
-
 N + 1 = 2h/2
-
 Log2 (N + 1) >= h/2
-
 2log2 (N + 1) >= h
-
 2log2 (N + 1) -> MAXIMUM HEIGHT OF TREE RB WITH 'N' INTERNAL NODES.
 
 INPUT/OUTPUT DATA:
