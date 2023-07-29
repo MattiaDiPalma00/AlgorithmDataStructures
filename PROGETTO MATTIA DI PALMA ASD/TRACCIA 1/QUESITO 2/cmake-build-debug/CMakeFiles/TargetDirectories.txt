@@ -1,0 +1,3 @@
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/cmake-build-debug/CMakeFiles/QUESITO_2.dir
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

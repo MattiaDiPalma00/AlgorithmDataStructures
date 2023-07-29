@@ -1,0 +1,50 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/FILE.h
+fstream
+-
+string
+-
+GRAFO.h
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/GRAFO.h
+NODO.h
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/NODO.h
+
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/GRAFO.h
+list
+-
+stack
+-
+NODO.h
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/NODO.h
+
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/NODO.h
+string
+-
+list
+-
+vector
+-
+
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/main.cpp
+iostream
+-
+cmath
+-
+list
+-
+vector
+-
+stack
+-
+GRAFO.h
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/GRAFO.h
+FILE.h
+C:/Users/USER/Desktop/PROGETTO MATTIA DI PALMA/TRACCIA 1/QUESITO 2/FILE.h
+
