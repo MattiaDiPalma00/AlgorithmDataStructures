@@ -103,7 +103,7 @@ By doing this, each node will be assigned the maximum value of the path starting
 COMPLEXITY STUDY:
 
 The time complexity of this algorithm is determined by the two functions DFS and MAXIMUM_PATH.
-The DFS function used for topological sorting has a cost ÿ (V + E), i.e. the sum of the set of vertices V and the number of arcs E.
+The DFS function used for topological sorting has a cost THETA(V + E), i.e. the sum of the set of vertices V and the number of arcs E.
 The MAX_PATH function takes a "while" to scan all the vertices popped off the stack (K) and also runs a "for" loop to iterate through the adjacency list, so we have a time complexity of THETA (V + E ).
 The total we have 2[THETA (V + E)] which is asymptotically equivalent to THETA(V + E).
 
