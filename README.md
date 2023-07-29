@@ -1,8 +1,6 @@
 # Algorithm and Data structures
 My project is divided into two parts: 
-
 The first part uses data structures such as red and black trees to implement insiemistic operationsby reading various numbers from a file.
-
 The second part deals with solving the problem of minimal paths on oriented and weighted graphs using the Ford bellmann algorithm and the 
 DFS for topological sorting. 
 
@@ -76,3 +74,38 @@ For INSERIMENTO_RB we use the LEFT_ROTATE and/or RIGHT_ROTATE functions while fo
 The set operations are implemented through the UNION, INTERSECTION and DIFFERENCE methods based on the INSERIMENTO_RB and DELETE_RB functions.
 The program also has a function ELIMINA_DUPLICATI for eliminating any nodes with repeated keys using the DELETE_RB and SEARCH_NODE methods.
 Finally, the user can choose via the keyboard whether to perform a single set operation or do them all.
+
+SECOND QUESTION :
+
+The problem posed in question 2 is that of calculating the route which maximizes the satisfaction of tourists who visit the archipelago starting from a generic island towards all the others.
+The archipelago in this case is seen as a graph where the "islands" are generic NODES and the "bridges" that is, the connections between the islands represent the ARCS belonging to the graph.
+The graph as written in the trace is directed and acyclic with the "quality" of the link it represents the
+WEIGHT of the bow which can also be a negative quantity.
+The output of the problem consists in the search for a maximum path within the graph to maximize the tourist's satisfaction and complete the visit of all the islands starting from any one.
+The graph being acyclic has an optimal substructure and therefore it is not an NP-HARD problem.
+
+DATA STRUCTURE DESCRIPTION:
+The data structure used to carry out the problem is a graph G, i.e. an ordered pair of V (set of nodes) and E (set of arcs).
+The elements of the set E are pairs of elements (u, v) of nodes belonging to V, so we can state that E is a proper subset of V x V.
+The graph treated in the trace is oriented and weighted where the edges are ordered pairs (u, v) of nodes belonging to V.
+The trace also states that the direction and the quality values of the connections for each island are specified in the input, which can also be negative.
+
+ALGORITHM DESCRIPTION:
+The problem has the optimal substructure, this guarantees us that, having computed the longest path between the source s and a node u, then the computed paths s and the predecessors of u will certainly be maximum.
+The graph G as described in the trace is a DAG (Direct Acyclic Graph) therefore we can perform a topological
+ordering i.e. a linear ordering of all its vertices such that if G contains an arc (u, v) then u appears before v in the ordering so as to compute all the paths from source node s to v.
+The topological sorting is done through the DFS algorithm, i.e. a depth visit with the use of a stack data structure to store the order of the vertices.
+Before calling the DFS for the topological sorting we use the Initialized_single_source function
+to initialize the distance of the source from itself to 0, the distances of the other nodes to minus infinity and the parents to NIL to later modify them with the computation of the maximum path.
+After doing all this and storing the sorted nodes on the stack, we extract them and pass each node the list of its neighbors by calling the RELAX function to relax them, improving the path maximum of the node found up to that point by modifying the attribute d or the distance from the source node and the parent ÿ.
+By doing this, each node will be assigned the maximum value of the path starting from the source node if the parent for the maximum path is determined.
+
+COMPLEXITY STUDY:
+
+The time complexity of this algorithm is determined by the two functions DFS and MAXIMUM_PATH.
+The DFS function used for topological sorting has a cost ÿ (V + E), i.e. the sum of the set of vertices V and the number of arcs E.
+The MAX_PATH function takes a "while" to scan all the vertices popped off the stack (K) and also runs a "for" loop to iterate through the adjacency list, so we have a time complexity of THETA (V + E ).
+The total we have 2[THETA (V + E)] which is asymptotically equivalent to THETA(V + E).
+
+
+
